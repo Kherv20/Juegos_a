@@ -1,0 +1,26 @@
+.menu, .newsletter, .contacto {
+	background-image: url(../temp/banner_menu.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.newsletter {
+	background-image: url(../temp/banner_news.jpg);
+}
+.contacto {
+	background-image: url(../temp/banner_contacto.jpg);
+	background-attachment: inherit;
+}
+.menu .container, .newsletter .container, .contacto .container {z-index: 2;}
+
+.contacto__logo {
+   max-width: 250px;
+}
+.contacto__information {
+	padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+}

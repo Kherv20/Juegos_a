@@ -1,0 +1,44 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"name": "Hambupapas",
+			"description": "Dos deliciosas hamburguesas sencillas acompañadas con papas medianas.",
+			"cost":25,
+			"moneda":"Bs.",
+			"image": "temp/panes3.jpg"
+		},
+		{
+			"id": 2,
+			"name": "Combo para dos",
+			"description": "Dos deliciosas hamburguesas sencillas acompañadas con papas medianas y una bebida.",
+			"cost":27,
+			"moneda":"Bs.",
+			"image": "temp/panes4.jpg"
+		},
+		{
+			"id": 3,
+			"name": "2 X 1, LLEVA DOS PAGA UNA",
+			"description": "Dos deliciosas hamburguesas sencillas.",
+			"cost":20,
+			"moneda":"Bs.",
+			"image": "temp/panes5.jpg"
+		},
+		{
+			"id": 4,
+			"name": "Hot dog",
+			"description": "Un hot dog con salsas, acompañado de papas fritas.",
+			"cost":15,
+			"moneda":"Bs.",
+			"image": "temp/panes.jpg"
+		},
+		{
+			"id": 5,
+			"name": "Hot dog especial",
+			"description": "Un hot dog con salchicha y pepinos.",
+			"cost":20,
+			"moneda":"Bs.",
+			"image": "temp/panes2.jpg"
+		}
+	]
+}

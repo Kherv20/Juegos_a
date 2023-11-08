@@ -1,0 +1,47 @@
+@import './loading.css';
+@import './font.css';
+@import './initials.css';
+@import './botones.css';
+@import './inputs.css';
+@import './banner.css';
+@import './slider.css';
+@import './layout.css';
+@import './header.css';
+@import './footer.css';
+@import './menu.css';
+@import './products.css';
+@import './cart.css';
+@import './modal.css';
+@import './message.css';
+
+
+/* 
+** Contenido
+	
+	
+** Contenido
+
+
+**Responsive
+
+@media screen and (orientation:landscape) {
+    
+}
+
+@media screen and (max-width: 1199.98px) {
+    
+}
+
+@media screen and (max-width: 991.98px) {
+    
+}
+
+@media screen and (max-width: 767.98px) {
+	
+}
+
+@media screen and (max-width: 575.98px) {
+   
+}
+
+**Responsive */

@@ -1,0 +1,186 @@
+.slider {
+	overflow: hidden;
+	position: relative;
+}
+.slider__box {
+    max-height: 100vh;
+	display: flex;
+	position: relative;
+}
+.slider__item {
+	width: 100%;
+    height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slider__imagen {
+	object-fit: cover;
+	width: 100%;
+    height: 100%;
+}
+.slider__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom,rgba(32,32,32,0) 0%,rgba(0,0,0,0.9) 100%);
+}
+.slider__container {
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: -45px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s, top 0.6s ease;
+}
+.slider__container--active {
+    top: 0;
+    opacity: 1;
+}
+.slider__container--hidden {
+    top: 45px;
+    opacity: 0;
+
+}
+.slder__btn {
+	position: absolute;
+}
+.slider__btn {
+	position: absolute;
+	color: rgba(111, 111, 111, 0.50);
+	bottom: 25px;
+	z-index: 5;
+	right: 45px;
+	font-size: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.slider__btn:hover {
+	color: rgb(72, 35, 241);
+}
+.slider__btn--left {
+	right: 75px;
+}
+.slider__btn--right {
+
+}
+
+.scroll__boton {
+	position: absolute;
+    z-index: 5;
+    width: 20px;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: botonScroll 2s ease 1s infinite;
+}
+.scroll__name {
+	position: absolute;
+    top: 0px;
+    left: -5px;
+    width: auto;
+    opacity: 0;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.scroll__boton:hover .scroll__name {
+	opacity: 1;
+	top: -20px;
+}
+.scroll__boton:hover {
+    animation: none;
+}
+.scroll__image {
+	display: block;
+	width: 20px;
+    height: 40px;
+    background-image: url(../temp/scroll.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.scroll__image:hover {
+	background-position: 0px -43px;
+}
+
+.promotional__title {
+	font-size: 28px;
+    color: #3141d6;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px rgba(32,32,32,0.8);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.promotional__subtitle {
+    letter-spacing: 0.20em;
+    text-shadow: 2px 2px 1px rgba(32,32,32,0.8);
+    color: #dcdcdc;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.promotional__subtitle span {
+	color: #fff;
+    font-weight: bold;
+}
+.promotional__description {
+	color: #dcdcdc;
+    font-size: 12px;
+    line-height: 22px;
+    text-shadow: 2px 2px 1px rgba(32,32,32,0.8);
+}
+@keyframes botonScroll {
+    0% {
+        opacity: 1;
+        bottom: 25px;
+    }
+    35% {
+        opacity: 0;
+        bottom: 13px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 25px;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    
+}
+
+@media screen and (max-width: 1199.98px) {
+    
+}
+
+@media screen and (max-width: 991.98px) {
+    
+}
+
+@media screen and (max-width: 767.98px) {
+    
+}
+
+@media screen and (max-width: 575.98px) {
+   .promotional__title {font-size: 22px;}
+   .promotional__subtitle {font-size: 12px;}
+   .promotional__description { font-size: 10px; line-height: 18px;}
+}

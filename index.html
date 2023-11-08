@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<meta charset="UTF-8">
+	<title>Negocio - Home</title>
+	
+	<link rel=icon href="./temp/icon.png" sizes="16x16" type="image/png">
+	<link rel="stylesheet" href="./css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="./css/bundle.css">
+
+</head>
+<body>
+	
+	<div id="loading" class="loading">
+		<div class="loading__preloader">
+			<div class="lds-grid">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<div id="cart" class="cart">
+		<div id="cart__button" class="cart__button">
+			<div id="cart__sum" class="cart__sum">
+				1
+			</div>
+			<i id="cart__button__icon" class="fas fa-shopping-cart"></i>
+		</div>
+		<div class="cart__content">
+			<div class="item__list">
+				<div id="cart__empty" class="cart__empty">
+					Tu carrito de compras esta vacío
+				</div>
+				<ul id="cart__products" class="cart__products">
+					
+				</ul>
+			</div>
+			<div class="total__price">
+				<div class="total__text">
+					<div class="total__title">Total compra</div>
+					<div class="total__number" id="total__cart">Bs. 0,00</div>
+				</div>
+				<div class="total__action">
+					<a class="btn btn--amarillo btn--sm" href="">Pagar</a>
+				</div>
+			</div>
+		</div>
+		<div class="cart__overlay"></div>
+	</div>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="header__logo">
+				<a href="#inicio">
+					<figure>
+						<img src="temp/logo.png" alt="Identificador de negocio.com">
+					</figure>
+				</a>
+			</div>
+			<nav id="header__menu" class="header__menu">
+				<ul>
+					<li>
+						<a href="#slider" class="header__link">inicio</a>
+					</li>
+					<li>
+						<a href="#menu" class="header__link">menú</a>
+					</li>
+					<li>
+						<a href="#contacto" class="header__link">contacto</a>
+					</li>
+					<li>
+						<a class="modal__open" href="" data-do="signin" >conectarse</a>
+					</li>
+					<li>
+						<a class="modal__open" href="" data-do="signup">registrarse</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__burguer">
+				<i id="burguer__menu" class="fas fa-bars"></i>
+			</div>
+		</div>
+		
+	</header>
+	<section id="slider" class="slider">
+		<div class="scroll__boton">
+			<div class="scroll__name">menú</div>
+			<a href="#menu" class="scroll__image link__page"></a>
+		</div>
+		<div class="slider__btn slider__btn--left">
+			<i class="fas fa-chevron-left"></i>
+		</div>
+		<div class="slider__btn slider__btn--right">
+			<i class="fas fa-chevron-right"></i>
+		</div>
+		<div class="slider__box" data-slider-delay="10000" data-direction="right" >
+			<div class="slider__item">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen" src="./temp/banner.jpg" alt="promocion 1">
+				<div class="container slider__container slider__container--active">
+					<div class="row">
+						<div class="col col--6 col--sm-12 col--md-12 col--offset-6 slider__content">
+							<h2 class="promotional__title">Dos juegos al precio de 1</h2>
+							<h3 class="promotional__subtitle">Tan solo por <span>650 Bs.</span></h3>
+							<p class="promotional__description">Los juegos mas recientes a la mitad de precio, tanto para Consolas como para Pc.</p>
+							<a class="btn btn--amarillo btn--sm add__promo__cart" href="" data-id="1">
+								<div class="add__promo__text">agregar a<span></span></div> 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider__item">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen" src="temp/banner2.jpg" alt="promocion 2">
+				<div class="container slider__container">
+					<div class="row">
+						<div class="col col--6 col--sm-12 col--md-12 col--offset-6 blanco slider__content">
+							<h2 class="promotional__title">Descuento por Halloween, Juegos retro y juegos de antigua generacion. Llevate 7 por un modico precio</h2>
+							<h3 class="promotional__subtitle">Tan solo por <span>499 Bs.</span></h3>
+							<p class="promotional__description">Juegos de la antigua generacion y juegos retro a muy buen precio.</p>
+							<a class="btn btn--amarillo btn--sm add__promo__cart" href="" data-id="2">
+								agregar a <i class="fas fa-cart-plus"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider__item">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen" src="temp/banner3.jpg" alt="promocion 3">
+				<div class="container slider__container">
+					<div class="row">
+						<div class="col col--6 col--sm-12 col--md-12 col--offset-6 blanco slider__content">
+							<h2 class="promotional__title">Llevate 2 juegos y recibe 1 gratis</h2>
+							<h3 class="promotional__subtitle">Tan solo por <span>299 Bs.</span></h3>
+							<p class="promotional__description">(Solo valido para productos seleccionados)</p>
+							<a class="btn btn--amarillo btn--sm add__promo__cart" href="" data-id="3">
+								agregar a <i class="fas fa-cart-plus"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="newsletter" class="section newsletter relative">
+		<div class="gradiant__overlay"></div>
+		<div class="container">
+			<div class="col col--12 m__b--x-2">
+				<h2 class="title-content blanco t__s t__b t__c t__u">News Letter</h2>
+				<p class="subtitle-content t__c t__s">Subscribete y recibe todo sobre nuestras <span class="blanco">actualizaciones</span></p>
+			</div>
+			<div class="col--offset-3 col--6 col--md-12 col--md-offset-3 col--lg-offset-3">
+				<form id="form-newletter" class="form row" action="" method="post" novalidate autocomplete="off">
+					<div class="col--12 m__b input__box">
+						<input class="input" id="NewsletterName" name="NewsletterName" type="text" placeholder="Nombre Completo">
+						<span></span>
+					</div>
+					<div class="col--12 m__b input__box">
+						<input class="input" id="NewsletterEmail" name="NewsletterEmail" type="email" placeholder="correo@correo.com">
+						<span></span>
+					</div>
+					<div class="col--12 t__c">
+						<input type="submit" value="ENVIAR" class="btn btn--rojo btn--sm">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<section id="menu" class="section menu relative">
+		<div class="gradiant__overlay"></div>
+		<div class="container">
+			<div class="col-12">
+				<h2 class="t__c blanco t__u t__s">menú</h2>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col col--12 m__b--x-2">
+					<figure class="icon-content"><img src="temp/burger.png" alt="Hamburguesas"></figure>
+					<h2 class="title-content burguer t__b t__c t__u">Juegos Variados</h2>
+					<p class="subtitle-content t__c">Disfruta de las mejores <span class="burguer">selecciones</span></p>
+				</div>
+				<div class="col--12">
+					<div class="row">
+						<article class="col--4 col--sm-12 col--md-6">
+							<div class="product">
+								<div class="gradiant__overlay"></div>
+								<div class="product__overlay">
+									<div class="product__cart add__to__cart" data-id="4"></div>
+								</div>
+								<img class="product__image" src="temp/panes.jpg" alt="">
+								<div class="product__information">
+									<div class="row">
+										<div class="col--12">
+											<div class="product__cost t__r t__s">
+												15 Bs.
+											</div>
+											<h3 class="product__name t__r t__s">Alan Wake II</h3>
+											<p class="product__description t__r t__s">Alan Wake 2 nos presenta una historia dividida en capítulos. La premisa inicial nos pone al control de Saga Anderson, una agente del FBI con dotes especialmente inusuales a la hora de resolver los casos más complicados. Junto al agente Casey, interpretado por Sam Lake, se dirige a Cauldron Lake a resolver una serie de asesinatos que tienen en vilo la región en la que desapareció Alan Wake</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col--4 col--sm-12 col--md-6">
+							<div class="product">
+								<div class="gradiant__overlay"></div>
+								<div class="product__overlay">
+									<div class="product__cart add__to__cart" data-id="5"></div>
+								</div>
+								<img class="product__image" src="temp/panes2.jpg" alt="">
+								<div class="product__information">
+									<div class="row">
+										<div class="col--12">
+											<div class="product__cost t__r t__s">
+												20 Bs.
+											</div>
+											<h3 class="product__name t__r t__s">The Last Of Us Parte 2</h3>
+											<p class="product__description t__r t__s">Secuela de The Last Of Us, en la que te adentras en la venganza de unos y el sufrimiento de otros.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col--4 col--sm-12 col--md-6">
+							<div class="product">
+								<div class="gradiant__overlay"></div>
+								<div class="product__overlay">
+									<div class="product__cart add__to__cart" data-id="1"></div>
+								</div>
+								<img class="product__image" src="temp/panes3.jpg" alt="">
+								<div class="product__information">
+									<div class="row">
+										<div class="col--12">
+											<div class="product__cost t__r t__s">
+												25 Bs.
+											</div>
+											<h3 class="product__name t__r t__s">Call Of Duty MW3</h3>
+											<p class="product__description t__r t__s">En la secuela directa de Modern Warfare II, que ha batido récords, el capitán Price y la fuerza operativa 141 se enfrentan a la amenaza definitiva. El ultranacionalista Vladimir Makarov extiende su dominio por el mundo, obligando a la fuerza operativa 141 a luchar como nunca antes.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col--4 col--sm-12 col--md-6">
+							<div class="product">
+								<div class="gradiant__overlay"></div>
+								<div class="product__overlay">
+									<div class="product__cart add__to__cart" data-id="2"></div>
+								</div>
+								<img class="product__image" src="temp/panes4.jpg" alt="">
+								<div class="product__information">
+									<div class="row">
+										<div class="col--12">
+											<div class="product__cost t__r t__s">
+												27 Bs.
+											</div>
+											<h3 class="product__name t__r t__s">God Of War Ragnarok</h3>
+											<p class="product__description t__r t__s">En God of War Ragnarok, Kratos no sólo se enfrenta a los dioses de Asgard. La batalla del Fantasma de Esparta es mucho más épica, lucha contra el destino. Cada uno de los momentos de su vida, desde la Grecia clásica a Midgard, conduce a este momento. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col--4 col--sm-12 col--md-6">
+							<div class="product">
+								<div class="gradiant__overlay"></div>
+								<div class="product__overlay">
+									<div class="product__cart add__to__cart" data-id="3"></div>
+								</div>
+								<img class="product__image" src="temp/panes5.jpg" alt="">
+								<div class="product__information">
+									<div class="row">
+										<div class="col--12">
+											<div class="product__cost t__r t__s">
+												20 Bs.
+											</div>
+											<h3 class="product__name t__r t__s">Payday 3 </h3>
+											<p class="product__description t__r t__s">PAYDAY 3 es la muy esperada secuela de uno de los shooters cooperativos más populares que existen. Desde su lanzamiento, los jugadores de PAYDAY han disfrutado de la emoción de un trabajo perfectamente planeado y ejecutado.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="contacto" class="section contacto relative">
+		<div class="gradiant__overlay"></div>
+		<div class="container">
+			<div class="col col--12 m__b--x-2">
+				<h2 class="title-content blanco t__s t__b t__c t__u">Contacto</h2>
+				<p class="subtitle-content t__c t__s">Escribenos estaremos complacidos en responder tus <span class="blanco">inquietudes</span></p>
+			</div>
+			<div class="col--12">
+				<div class="row">
+					<div class="col--6 col--sm-12 col--md-12">
+						<form id="form-contact" class="form row" action="" novalidate autocomplete="off">
+							<div class="col--6 m__b input__box input__box--half input__box--first">
+								<input class="input" id="ConctoName" name="ConctoName" type="text" placeholder="Nombre">
+								<span></span>
+							</div>
+							<div class="col--6 m__b input__box input__box--half">
+								<input class="input" id="ContactoLastName" name="ContactoLastName" type="text" placeholder="Apellido">
+								<span></span>
+							</div>
+							<div class="col--12 m__b input__box">
+								<input class="input" id="ContactoEmail" name="ContactoEmail" type="email" placeholder="correo@correo.com">
+								<span></span>
+							</div>
+							<div class="col--12 m__b input__box">
+								<textarea class="input textarea" name="ContatoMessage" id=ContatoMessage" cols="30" rows="7" placeholder="Mensaje"></textarea>
+								<span></span>
+							</div>
+							<div class="col--12 t__l">
+								<input type="submit" value="CONTACTAR" class="btn btn--rojo btn--sm">
+							</div>
+						</form>	
+					</div>
+					<div class="col--6 col--sm-12 col--md-12 t__r form">
+						<img class="contacto__logo" src="temp/logo.png" alt="Jartate.com">
+						<p class="contacto__information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nisi cumque, consequuntur molestiae. Voluptate, natus temporibus facere numquam maxime omnis, vitae neque maiores obcaecati odio dolorem dicta laborum ipsum a.</p>
+						<p class="contacto__information">hola@burguersía.com</p>
+						<p class="contacto__information">+58 414-555-8574</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<div class="overlay" id="overlay"></div>
+	<div class="modal" id="modal">
+		<div id="modal-content">
+			<!-- Ventana modal para ingresar al sistema -->
+			<div id="modal-signin">
+				<h2 class="burguer t__s">Conectarse</h2>
+				<div class="modal-content">
+					<form id="form-signin" class="form row" action="login.php" method="post" novalidate autocomplete="off">
+						<div class="col--12 m__b input__box">
+							<input class="input" id="Username" name="Username" type="text" placeholder="Usuario">
+							<span></span>
+						</div>
+						<div class="col--12 m__b input__box">
+							<input class="input" id="Password" name="Password" type="password" placeholder="Contraseña">
+							<span></span>
+						</div>
+						<div class="col--12 t__c">
+							<input type="submit" value="ENTRAR" class="btn btn--amarillo btn--sm">
+						</div>
+					</form>	
+				</div>
+			</div>
+
+			<div id="modal-signup">
+				<h2 class="burguer t__s">Registrarse</h2>
+				<div class="modal-content">
+					<form id="form-signup" class="form row" action="" novalidate autocomplete="off">
+						<div class="col--6 m__b input__box input__box--half input__box--first">
+							<input class="input" id="registerName" name="registerName" type="text" placeholder="Nombre">
+							<span></span>
+						</div>
+						<div class="col--6 m__b input__box input__box--half">
+							<input class="input" id="registerLastName" name="registerLastName" type="text" placeholder="Apellido">
+							<span></span>
+						</div>
+						<div class="col--12 m__b input__box">
+							<input class="input" id="registerEmail" name="registerEmail" type="email" placeholder="correo@correo.com">
+							<span></span>
+						</div>
+						<div class="col--12 m__b input__box">
+							<input class="input" id="registerPass" name="registerPass" type="password" placeholder="Contraseña">
+							<span></span>
+						</div>
+						<div class="col--12 m__b input__box">
+							<input class="input" id="registerRePass" name="registerRePass" type="password" placeholder="RepitaContraseña">
+							<span></span>
+						</div>
+						<div class="col--12 t__C">
+							<input type="submit" value="CREAR" class="btn btn--amarillo btn--sm">
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+		<div id="hide-modal" class="modal-buttons">
+			<i class="fas fa-times"></i>
+		</div>
+	</div>
+
+	<!-- Message Box -->
+	<div id="message__box" class="message__box"></div>
+	<!-- Message Box -->
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col col--12">
+					<div class="t__c negro">
+						<strong>Todos los derechos</strong> reservados 2023. <span class="burguer">burguersía</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/loading.js"></script>
+	<script src="./js/slider.js"></script>
+	<script src="./js/header.js"></script>
+	<script src="./js/scrollSmooth.js"></script>
+	<script src="./js/cart.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/submit.js"></script>
+	<script src="./js/messageBox.js"></script>
+</body>
+</html>

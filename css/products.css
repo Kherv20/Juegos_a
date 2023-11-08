@@ -1,0 +1,115 @@
+.product {
+	position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+.product .gradiant__overlay {
+	margin: 10px;
+    transition: all 0.3s ease;
+}
+.product__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(32,32,32,0.7);
+    z-index: 4;
+    margin: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.product:hover .product__overlay {
+    opacity: 1;
+}
+.product__cart, .add__promo__cart span {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(../temp/cart.png);
+    background-size: 1200px 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 40px);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s, filter 0.3s ease, transform 0.3s ease;
+}
+.add__promo__cart {
+    padding: 5px 15px;
+}
+.add__promo__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add__promo__cart span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: 360px 30px;
+    position: static;
+    opacity: 1;
+    margin-right: -5px;
+}
+.product__cart:hover {
+    -webkit-filter: drop-shadow(2px 1px 0px #D68831);
+    filter: drop-shadow(2px 1px 0px #D68831);
+}
+.product__cart:active {
+    transform: scale(0.9);
+    top: calc(50% - 49px);
+}
+.product__cart--active {
+    animation: cart 1.2s steps(12);
+}
+.add__promo__cart--active span {
+    animation: cartmini 1.2s steps(12);
+}
+.product:hover .product__cart {
+    opacity: 1;
+}
+.product__image {
+	object-fit: cover;
+	width: 100%;
+	max-height: 300px;
+    transition: all 0.3s ease-in-out;
+}
+.product__information {
+	position: absolute;
+    color: #fff;
+    right: 10px;
+    bottom: 0;
+    z-index: 3;
+    padding: 10px 10px;
+    margin: 10px 0;
+    width: calc(100% - 20px);
+}
+.product__name {
+	text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color: #D68831;
+}
+.product__description {
+	margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+.product__cost {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@keyframes cart {
+   from { background-position:    0px; }
+     to { background-position: -1200px; }
+}
+@keyframes cartmini {
+   from { background-position:    0px; }
+     to { background-position: -360px; }
+}
